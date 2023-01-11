@@ -1,0 +1,359 @@
+/*
+Brand: #313B49
+Sweet darker: #2a303c
+White: #FFFFFF
+Light golden: #FFBF00
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #0f1014;
+  box-sizing: border-box;
+  color: #ffffff;
+  /*
+  font-weight: 300;
+  font-size: ;
+  */
+  /* line-height: 1.9; */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #ffffffa6;
+}
+
+/** CONTAINER **/
+.container {
+  /* max-width: 1440px; */
+  max-width: 1280px;
+  max-height: 4430px;
+  margin: auto;
+  padding: 15px 0px;
+}
+
+/** HEADER **/
+/* .header {
+ 
+} */
+/* Logo */
+
+/* NAV */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 15px;
+  z-index: 100;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 32px; */
+  width: 372px;
+  height: 48px;
+  border: 1px solid #1a1c23;
+  background: #1a1c23;
+  box-shadow: 4px 8px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+}
+
+.nav__link-item {
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 6px 14px;
+}
+
+.nav__link--active {
+  /* border: 1px solid rgba(255, 255, 255, 0.08); */
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: 24px;
+  color: #ffbf00;
+}
+
+.default {
+  width: 48px;
+  height: 48px;
+}
+
+/* HEADING */
+/* .header {
+} */
+
+.heading {
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+.heading__title {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 60px;
+  line-height: 67px;
+  text-align: center;
+}
+
+.heading__button {
+  background: #ffbf00;
+  box-shadow: 4px 4px 0px #f49d1a;
+  border-radius: 32px;
+  width: 190px;
+  height: 55px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #2a303c;
+}
+
+.heading__button:focus {
+  outline: none;
+}
+
+.heading__button:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+}
+
+/* SECTION */
+.section {
+  /* padding-top: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__padding {
+  padding-top: 80px;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.section__contact {
+  justify-content: center;
+  padding-top: 440px;
+  padding-bottom: 90px;
+  gap: 8px;
+}
+
+.section--heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section--text {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* .section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+} */
+
+.lazy-load {
+  filter: blur(20px);
+}
+
+/* WORKS */
+.works {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 18px;
+  justify-content: center;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.works__img {
+  width: 100%;
+  height: 100%;
+}
+
+.work__img--1 {
+  grid-column: 1 / 4;
+}
+.work__img--2 {
+  grid-column: 4 / -1;
+}
+
+.work__img--3 {
+  grid-column: 1 / 6;
+}
+
+.work__img--4 {
+  grid-column: 6 / -1;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 36px;
+  row-gap: 36px;
+}
+
+.service {
+  border: 1px solid #ffffff38;
+  border-radius: 10px;
+  padding: 36px;
+}
+
+.service--text {
+  /* font-size: ; */
+  margin-bottom: 14px;
+}
+
+/* ABOUT US */
+.about--text {
+  padding: 0px 280px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* CONTACT */
+.contact--highlight {
+  font-weight: 100;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+}
+
+.footer--highlight {
+  color: #ffbf00;
+}
+
+/** Zoom in image **/
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Within Container */
+.slowmo-img {
+  /* height: 300px;  */
+  /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+.slowmo-img img {
+  transition: transform 1s ease;
+}
+.slowmo-img:hover img {
+  transform: scale(1.08);
+}
+
+/* (A) WRAPPER */
+.fullwrap {
+  cursor: pointer;
+  position: relative; /* required for (c2) */
+  /* max-width: 500px;  */
+  /* optional */
+}
+
+/* (B) RESPONSIVE IMAGE */
+/* .fullwrap img {
+  width: 100%;
+  height: 100%;
+} */
+
+/* (C) CAPTION */
+.fullcap {
+  /* (C1) DIMENSIONS */
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  /* (C2) POSITION */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* text-align: center; */
+  /* padding-top: 65%; */
+
+  /* (C3) COLORS */
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.cap-large {
+  padding-top: 38%;
+  padding-left: 5%;
+}
+.cap-medium {
+  padding-top: 65%;
+  padding-left: 8%;
+}
+.cap-small {
+  padding-top: 75%;
+  padding-left: 5%;
+}
+
+/* (D) SHOW/HIDE */
+.fullcap {
+  visibility: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.fullwrap:hover .fullcap {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes text-entry {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+.cap-text {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.fullwrap:hover .cap {
+  animation: text-entry 0.5s linear;
+}
