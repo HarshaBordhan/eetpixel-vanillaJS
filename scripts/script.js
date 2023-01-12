@@ -105,14 +105,3 @@ document.querySelector(".navbtn").addEventListener("click", (e) => {
   nav.classList.add("nav__links-collapse");
   nav.classList.toggle("hidden");
 });
-
-// document
-//   .querySelector(".nav")
-//   .closest(".nav__link")
-//   .forEach((link) =>
-//     link.addEventListener("click", (e) => {
-//       e.preventDefault();
-
-//       nav.classList.remove("hidden");
-//     })
-//   );
