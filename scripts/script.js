@@ -87,14 +87,23 @@ img.forEach((img) => {
 document.querySelector(".navbtn").addEventListener("click", (e) => {
   e.preventDefault();
 
+  /*
   const nav = document.querySelector(".nav__links");
   console.log(nav);
 
   if (!nav.classList.contains("hidden")) {
     return nav.classList.add("hidden");
+    // return (nav.style.display = "none");
   }
 
+  nav.classList.add("nav__links-collapse");
   nav.classList.remove("hidden");
+  */
+
+  const nav = document.querySelector(".nav__links");
+
+  nav.classList.add("nav__links-collapse");
+  nav.classList.toggle("hidden");
 });
 
 // document
