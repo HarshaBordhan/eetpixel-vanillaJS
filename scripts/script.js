@@ -102,6 +102,14 @@ document.querySelector(".navbtn").addEventListener("click", (e) => {
 
   const nav = document.querySelector(".nav__links");
 
-  nav.classList.add("nav__links-collapse");
+  // nav.classList.add("nav__links-collapse");
   nav.classList.toggle("hidden");
 });
+
+document.querySelectorAll(".nav__link").forEach((link) =>
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    document.querySelector(".nav__links").classList.add("hidden");
+  })
+);
