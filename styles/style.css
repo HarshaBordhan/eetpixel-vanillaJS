@@ -528,6 +528,12 @@ img {
   .nav__links {
     width: 200px;
   }
+
+  .cap--work {
+    top: 44%;
+    bottom: 10%;
+  }
+
   .about {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
