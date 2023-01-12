@@ -81,3 +81,29 @@ img.forEach((img) => {
   imgObserver.observe(img);
   img.classList.add("lazy-load");
 });
+
+//////////////
+// Show nav
+document.querySelector(".navbtn").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const nav = document.querySelector(".nav__links");
+  console.log(nav);
+
+  if (!nav.classList.contains("hidden")) {
+    return nav.classList.add("hidden");
+  }
+
+  nav.classList.remove("hidden");
+});
+
+// document
+//   .querySelector(".nav")
+//   .closest(".nav__link")
+//   .forEach((link) =>
+//     link.addEventListener("click", (e) => {
+//       e.preventDefault();
+
+//       nav.classList.remove("hidden");
+//     })
+//   );
