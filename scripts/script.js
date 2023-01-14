@@ -1,5 +1,6 @@
 "use strict";
 
+const nav = document.querySelector(".nav__links");
 const navLink = document.querySelectorAll(".nav__link-item");
 const allSections = document.querySelectorAll(".section");
 const header = document.querySelector(".header");
@@ -52,15 +53,18 @@ const img = document.querySelectorAll("img[data-src]");
 
 const loading = (entries, observer) => {
   const [entry] = entries;
+
+  /*
   if (entry.isIntersecting) {
     entry.target.src = entry.target.dataset.src;
 
     entry.target.classList.remove("lazy-load");
     observer.unobserve(entry.target);
   }
+*/
 
   // Or,
-  /*
+
   if (!entry.isIntersecting) return;
 
   entry.target.src = entry.target.dataset.src;
@@ -69,12 +73,12 @@ const loading = (entries, observer) => {
     entry.target.classList.remove("lazy-load");
   });
   observer.unobserve(entry.target);
-  */
 };
 
 const imgObserver = new IntersectionObserver(loading, {
   root: null,
   threshold: 0,
+  rootMargin: "-200px",
 });
 
 img.forEach((img) => {
@@ -100,10 +104,14 @@ document.querySelector(".navbtn").addEventListener("click", (e) => {
   nav.classList.remove("hidden");
   */
 
-  const nav = document.querySelector(".nav__links");
-
   // nav.classList.add("nav__links-collapse");
   nav.classList.toggle("hidden");
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !nav.classList.contains("hidden")) {
+    nav.classList.add("hidden");
+  }
 });
 
 document.querySelectorAll(".nav__link").forEach((link) =>
