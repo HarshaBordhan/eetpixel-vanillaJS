@@ -185,7 +185,7 @@ img {
 }
 
 @media (max-width: 640px) {
-  .section__padding {}
+  /* .section__padding {} */
 }
 
 @media (max-width: 480px) {
