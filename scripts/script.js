@@ -48,13 +48,13 @@ document.addEventListener("scroll", activeNav);
 
 ///////////////
 // Lazy load image
-const img = document.querySelectorAll("img[data-src]");
+// const img = document.querySelectorAll("img[data-src]");
 // console.log(img);
 
-const loading = (entries, observer) => {
-  const [entry] = entries;
+// const loading = (entries, observer) => {
+// const [entry] = entries;
 
-  /*
+/*
   if (entry.isIntersecting) {
     entry.target.src = entry.target.dataset.src;
 
@@ -63,28 +63,28 @@ const loading = (entries, observer) => {
   }
 */
 
-  // Or,
+// Or,
 
-  if (!entry.isIntersecting) return;
+//   if (!entry.isIntersecting) return;
 
-  entry.target.src = entry.target.dataset.src;
+//   entry.target.src = entry.target.dataset.src;
 
-  entry.target.addEventListener("load", () => {
-    entry.target.classList.remove("lazy-load");
-  });
-  observer.unobserve(entry.target);
-};
+//   entry.target.addEventListener("load", () => {
+//     entry.target.classList.remove("lazy-load");
+//   });
+//   observer.unobserve(entry.target);
+// };
 
-const imgObserver = new IntersectionObserver(loading, {
-  root: null,
-  threshold: 0,
-  rootMargin: "-200px",
-});
+// const imgObserver = new IntersectionObserver(loading, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: "-200px",
+// });
 
-img.forEach((img) => {
-  imgObserver.observe(img);
-  img.classList.add("lazy-load");
-});
+// img.forEach((img) => {
+//   imgObserver.observe(img);
+//   img.classList.add("lazy-load");
+// });
 
 //////////////
 // Show nav

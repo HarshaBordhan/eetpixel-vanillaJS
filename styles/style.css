@@ -178,6 +178,7 @@ p {
   padding-top: 440px;
   padding-bottom: 90px;
   gap: 8px;
+  height: 100vh;
 }
 
 .section--heading {
@@ -196,9 +197,9 @@ p {
   transform: translateY(8rem);
 } */
 
-.lazy-load {
+/* .lazy-load {
   filter: blur(20px);
-}
+} */
 
 /* WORKS */
 .works {
