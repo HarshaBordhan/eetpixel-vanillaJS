@@ -1,5 +1,6 @@
 "use strict";
 
+const navbar = document.querySelector(".navbar");
 const nav = document.querySelector(".nav__links");
 const navLink = document.querySelectorAll(".nav__link-item");
 const allSections = document.querySelectorAll(".section");
@@ -91,23 +92,11 @@ document.addEventListener("scroll", activeNav);
 document.querySelector(".navbtn").addEventListener("click", (e) => {
   e.preventDefault();
 
-  /*
-  const nav = document.querySelector(".nav__links");
-  console.log(nav);
-
-  if (!nav.classList.contains("hidden")) {
-    return nav.classList.add("hidden");
-    // return (nav.style.display = "none");
-  }
-
-  nav.classList.add("nav__links-collapse");
-  nav.classList.remove("hidden");
-  */
-
-  // nav.classList.add("nav__links-collapse");
-  nav.classList.toggle("hidden");
+  nav.classList.toggle("show");
+  document.querySelector(".navbar").classList.toggle("show");
 });
 
+/*
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !nav.classList.contains("hidden")) {
     nav.classList.add("hidden");
@@ -121,3 +110,25 @@ document.querySelectorAll(".nav__link").forEach((link) =>
     document.querySelector(".nav__links").classList.add("hidden");
   })
 );
+*/
+
+// Close when click anywhere
+
+document.body.addEventListener("mousedown", (e) => {
+  let isClickInsideButton = document
+    .querySelector(".navbtn")
+    .contains(e.target);
+  let isClickInsideNav = navbar.contains(e.target);
+
+  if (!isClickInsideNav && !isClickInsideButton) {
+    navbar.classList.remove("show");
+    nav.classList.remove("show");
+  }
+});
+
+navLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
+    navbar.classList.remove("show");
+  });
+});
