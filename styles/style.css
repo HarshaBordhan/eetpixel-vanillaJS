@@ -58,10 +58,10 @@ p {
 /* Logo */
 
 /* NAV */
-/* .navContainer{
+.navContainer{
   position: relative;
   width: 100%;
-} */
+}
 
 .nav {
   display: flex;
@@ -70,7 +70,7 @@ p {
   align-items: center;
   /* position: sticky; */
   width: 100%;
-  padding: 0 6rem;
+  padding: 0 4rem;
   z-index: 100;
 }
 
@@ -424,23 +424,23 @@ img {
 
 @media (max-width: 1440px) {
   .container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
   }
 
   .nav{
-    padding: 0 4rem}
+    padding: 0 2rem}
   }
 
-@media (max-width: 1440px) {
+@media (max-width: 1280px) {
   .container {
     max-width: 1280px;
     margin: 0 auto;
   }
 
-  .nav{
-    padding: 0 3rem}
-  }
+  /* .nav{
+    padding: 0 2rem}*/
+  } 
 
 @media (max-width: 1024px) {
   .container {
@@ -450,7 +450,7 @@ img {
   .nav {
     align-items: flex-start;
     /* position: relative; */
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
   }
 
   .heading {
@@ -542,9 +542,9 @@ img {
     max-width: 768px;
   }
 
-  .nav {
+  /* .nav {
     padding: 0 1rem;
-  }
+  } */
 
   .heading {
     padding: 80px 50px;
