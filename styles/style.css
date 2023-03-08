@@ -440,6 +440,9 @@ img {
     margin: 0 auto;
   }
 
+  .heading{
+    margin-top: 0px;
+  }
   /* .nav{
     padding: 0 2rem}*/
 }
