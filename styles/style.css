@@ -290,6 +290,10 @@ p {
   margin: 0 auto;
 }
 
+/* Extra Edition */
+.about__img img {
+ backdrop-filter: blur(12px);
+}
 /* .about__img img {
  
 } */
